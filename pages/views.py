@@ -79,6 +79,3 @@ def ranking(request):
 
 def research(request):
     return render(request, 'power/research.html', {})
-
-
-# Create your views here.
