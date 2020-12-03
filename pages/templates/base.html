@@ -1,0 +1,247 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Content Hub | Interactive Demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+
+        <!-- App css -->
+        <link href="{% static 'css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/app-modern.min.css' %}" rel="stylesheet" type="text/css" id="light-style" />
+        <link href="{% static 'css/app-modern-dark.min.css' %}" rel="stylesheet" type="text/css" id="dark-style" />
+
+    </head>
+
+    <body class="loading" data-layout="detached" data-layout-config='{"leftSidebarCondensed":false,"darkMode":false, "showRightSidebarOnStart": true}' style="background-color: rgb(255, 255, 255);">
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom topnav-navbar ">
+            <!--class="topnav-navbar-dark" if wanted-->
+            <div class="container-fluid">
+
+                <!-- LOGO -->
+                <a href="{% url 'index' %}" class="topnav-logo">
+                    <span class="topnav-logo-lg">
+                        <img src="{% static 'images/logo-light.png' %}" alt="" height="16">
+                    </span>
+                    <span class="topnav-logo-sm">
+                        <img src="{% static 'images/logo_sm.png' %}" alt="" height="16">
+                    </span>
+                </a>
+
+                <ul class="list-unstyled topbar-right-menu float-right mb-0">
+            
+                    <li class="dropdown notification-list topbar-dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" id="topbar-languagedrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                             <span class="align-middle">Products</span> <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown notification-list topbar-dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" id="topbar-languagedrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                             <span class="align-middle">Services</span> <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown notification-list topbar-dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" id="topbar-languagedrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                             <span class="align-middle">Resources</span> <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                    </li>
+
+
+                    <li class="notification-list">
+                        <a class="nav-link right-bar-toggle" href="javascript: void(0);">
+                            <i class="dripicons-gear noti-icon"></i>
+                        </a>
+                    </li>
+
+                </ul>
+                <a class="button-menu-mobile disable-btn">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <!-- end Topbar -->
+        
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <!-- Begin page -->
+            <div class="wrapper">
+
+                <!-- ========== Left Sidebar Start ========== -->
+                <div class="left-side-menu left-side-menu-detached">
+
+
+                    <!--- Sidemenu -->
+                    <ul class="metismenu side-nav">
+
+                        <li class="side-nav-title side-nav-item">Custom Navigation</li>
+                        <li class="side-nav-item">
+                            <a href="{% url 'index' %}" class="side-nav-link">
+                                <i class="uil-layer-group"></i>
+                                <span> Content Hub Overview </span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="{% url 'faq' %}" class="side-nav-link">
+                                <i class="uil-layer-group"></i>
+                                <span> Content Hub FAQ </span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" class="side-nav-link">
+                                <i class="uil-copy-alt"></i>
+                                <span> Development </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-second-level" aria-expanded="false">
+
+                                <li>
+                                    <a href="{% url 'purpose' %}">Purpose</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'advantages' %}">Advantages</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'blogvhub' %}">Blog vs. Content Hub</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'development' %}">Development Tools</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" class="side-nav-link">
+                                <i class="uil-copy-alt"></i>
+                                <span> Power and Impact </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-second-level" aria-expanded="false">
+                                <li>
+                                    <a href="{% url 'organization' %}">Power of Organization</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'content' %}">Power of Content</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'research' %}">Marketing Research</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'ranking' %}">Ranking Oportunities</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'deviance' %}">Positive Deviance</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'curtain' %}">Pulling Back the Curtain</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" class="side-nav-link">
+                                <i class="uil-copy-alt"></i>
+                                <span> Sales and Marketing </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-second-level" aria-expanded="false">
+                                <li>
+                                    <a href="{% url 'seo' %}">SEO Impact</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'ad' %}">PPC Impact</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'sales-funel' %}">Sales Funel Impact</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'conversion' %}">Conversion Rates</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'long-short' %}">Long Term vs. Short Term</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                      </ul>
+                    </ul>
+
+                    <!-- Help Box -->
+                    <div class="help-box text-center">
+                        <a href="javascript: void(0);" class="float-right close-btn text-body">
+                            <i class="mdi mdi-close"></i>
+                        </a>
+                        <img src="{% static 'images/help-icon.svg' %}" height="90" alt="Helper Icon Image" />
+                        <h5 class="mt-3">Free Downloadable Template</h5>
+                        <p class="mb-3">Download and view the HTML files for the conent hub to get a quick start on building your own.</p>
+                        <a href="https://github.com/austincolton717/content-hub" class="btn btn-outline-primary btn-sm">View Download</a>
+                    </div>
+                    <!-- end Help Box -->
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+                    <!-- Sidebar -left -->
+
+                </div>
+                <!-- Left Sidebar End -->
+
+                <div class="content-page">
+                    {% block content %}
+                
+                    {% endblock %}       
+                </div> <!-- End Content -->
+
+                    <!-- Footer Start -->
+                    <footer class="footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    2018 - 2020 © Hyper - Coderthemes.com
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-md-right footer-links d-none d-md-block">
+                                        <a href="javascript: void(0);">About</a>
+                                        <a href="javascript: void(0);">Support</a>
+                                        <a href="javascript: void(0);">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- end Footer -->
+
+                </div> <!-- content-page -->
+
+            </div> <!-- end wrapper-->
+        </div>
+        <!-- END Container -->
+
+
+        <div class="rightbar-overlay"></div>
+        <!-- /Right-bar -->
+
+
+        <!-- bundle -->
+        <script src="{% static 'js/vendor.min.js' %}"></script>
+        <script src="{% static 'js/app.min.js' %}"></script>
+        
+        <!-- third party js -->
+        <script src="{% static 'js/vendor/Chart.bundle.min.js' %}"></script>
+        <!-- third party js ends -->
+
+        <!-- demo app -->
+        <script src="{% static 'js/pages/demo.dashboard-projects.js' %}"></script>
+        <!-- end demo js-->
+
+    </body>
+</html>
